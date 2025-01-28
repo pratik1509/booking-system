@@ -1,6 +1,6 @@
 using System.Linq.Expressions;
 
-namespace BuildingBlocks.RepositorySpecification
+namespace BuildingBlocks.RepositorySpecification.Specification
 {
     public interface ISpecification<T>
     {

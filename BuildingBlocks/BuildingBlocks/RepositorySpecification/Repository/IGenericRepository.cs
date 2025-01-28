@@ -1,4 +1,7 @@
-namespace BuildingBlocks.RepositorySpecification
+using BuildingBlocks.RepositorySpecification.Entity;
+using BuildingBlocks.RepositorySpecification.Specification;
+
+namespace BuildingBlocks.RepositorySpecification.Repository
 {
     public interface IGenericRepository<T> where T : BaseEntity
     {

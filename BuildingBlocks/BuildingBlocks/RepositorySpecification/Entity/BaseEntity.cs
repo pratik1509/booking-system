@@ -1,4 +1,4 @@
-namespace BuildingBlocks.RepositorySpecification
+namespace BuildingBlocks.RepositorySpecification.Entity
 {
     public class BaseEntity
     {

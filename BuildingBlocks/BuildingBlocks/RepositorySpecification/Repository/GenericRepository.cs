@@ -1,6 +1,8 @@
+using BuildingBlocks.RepositorySpecification.Entity;
+using BuildingBlocks.RepositorySpecification.Specification;
 using Microsoft.EntityFrameworkCore;
 
-namespace BuildingBlocks.RepositorySpecification
+namespace BuildingBlocks.RepositorySpecification.Repository
 {
     public class GenericRepository<T>(DbContext context) : IGenericRepository<T> where T : BaseEntity
     {

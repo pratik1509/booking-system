@@ -1,4 +1,6 @@
-namespace BuildingBlocks.RepositorySpecification
+using BuildingBlocks.RepositorySpecification.Entity;
+
+namespace BuildingBlocks.RepositorySpecification.Specification
 {
     public class SpecificationEvaluator<T> where T : BaseEntity
     {
