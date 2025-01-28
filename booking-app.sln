@@ -7,6 +7,10 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "BuildingBlocks", "BuildingB
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BuildingBlocks", "BuildingBlocks\BuildingBlocks\BuildingBlocks.csproj", "{1851A7D0-2535-4ADB-956E-97CBD0D37C33}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Services", "Services", "{850121D8-19DE-4B38-93E2-7B1A9E9F2215}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Hotel.API.Infrastructure", "Services\Hotel.API.Infrastructure\Hotel.API.Infrastructure.csproj", "{B5991113-41D5-446D-AF6B-36587F0F66A7}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -20,8 +24,13 @@ Global
 		{1851A7D0-2535-4ADB-956E-97CBD0D37C33}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1851A7D0-2535-4ADB-956E-97CBD0D37C33}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1851A7D0-2535-4ADB-956E-97CBD0D37C33}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B5991113-41D5-446D-AF6B-36587F0F66A7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B5991113-41D5-446D-AF6B-36587F0F66A7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B5991113-41D5-446D-AF6B-36587F0F66A7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B5991113-41D5-446D-AF6B-36587F0F66A7}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{1851A7D0-2535-4ADB-956E-97CBD0D37C33} = {E7D5F72B-DE11-4A59-8514-3A041B463229}
+		{B5991113-41D5-446D-AF6B-36587F0F66A7} = {850121D8-19DE-4B38-93E2-7B1A9E9F2215}
 	EndGlobalSection
 EndGlobal
