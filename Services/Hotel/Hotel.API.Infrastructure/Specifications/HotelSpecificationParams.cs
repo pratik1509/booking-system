@@ -2,8 +2,10 @@ namespace Hotel.API.Infrastructure.Specifications
 {
     public class HotelSpecificationParams
     {
-        public string? Location { get; set; }
-        public int? Rating { get; set; }
+        public string? Address { get; set; }
+        public string? City { get; set; }
+        public string? Country { get; set; }
+        public int? StarRating { get; set; }
         public string? Name { get; set; }
 
         // Pagination
@@ -13,5 +15,6 @@ namespace Hotel.API.Infrastructure.Specifications
         // Sorting
         public string SortBy { get; set; } = "Name";  // Default sorting field
         public bool SortDescending { get; set; } = false;  // Default sort direction (ascending)
+
     }
 }

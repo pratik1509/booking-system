@@ -29,6 +29,16 @@ namespace BuildingBlocks.RepositorySpecification.Specification
             OrderByDesc = orderByDescExpression;
         }
 
+        protected void AddSkip(int skip)
+        {
+            Skip = skip;
+        }
+
+        protected void AddTake(int take)
+        {
+            Take = take;
+        }
+
         protected void ApplyDistinct()
         {
             IsDistinct = true;
