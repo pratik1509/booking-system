@@ -9,10 +9,10 @@ USER app
 FROM --platform=$BUILDPLATFORM mcr.microsoft.com/dotnet/sdk:9.0 AS build
 ARG configuration=Release
 WORKDIR /src
-COPY ["Services/Hotel.API/Hotel.API.csproj", "Services/Hotel.API/"]
-RUN dotnet restore "Services/Hotel.API/Hotel.API.csproj"
+COPY ["src/Services/Hotel/Hotel.API/Hotel.API.csproj", "src/Services/Hotel/Hotel.API/"]
+RUN dotnet restore "src/Services/Hotel/Hotel.API/Hotel.API.csproj"
 COPY . .
-WORKDIR "/src/Services/Hotel.API"
+WORKDIR "/src/src/Services/Hotel/Hotel.API"
 RUN dotnet build "Hotel.API.csproj" -c $configuration -o /app/build
 
 FROM build AS publish
