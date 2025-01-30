@@ -1,53 +1,61 @@
+using BuildingBlocks.RepositorySpecification.Repository;
 using Microsoft.EntityFrameworkCore;
 
 namespace Hotel.API.Infrastructure.Data
 {
-    public class HotelRepository(StoreContext context) : IHotelRepository
+    public class HotelRepository(IGenericRepository<Entities.Hotel> genericRepository) : IHotelRepository
     {
         public void AddHotel(Entities.Hotel hotel)
         {
-            context.Hotels.Add(hotel);
+            genericRepository.Add(hotel);
+            genericRepository.SaveAllAsync();
         }
 
         public void DeleteHotel(Entities.Hotel hotel)
         {
-            context.Hotels.Remove(hotel);
+            genericRepository.Remove(hotel);
+            genericRepository.SaveAllAsync();
         }
 
         public async Task<IReadOnlyList<Entities.Hotel>> GetHotelAsync(string? name, string? country, string? city)
         {
-            var query = context.Hotels.AsQueryable();
 
-            if (!string.IsNullOrWhiteSpace(name))
-                query = query.Where(x => x.Name == name);
+            return null;
+            // var query = genericRepository.AsQueryable();
 
-            if (!string.IsNullOrWhiteSpace(country))
-                query = query.Where(x => x.Country == country);
+            // if (!string.IsNullOrWhiteSpace(name))
+            //     query = query.Where(x => x.Name == name);
 
-            if (!string.IsNullOrWhiteSpace(city))
-                query = query.Where(x => x.City == city);
+            // if (!string.IsNullOrWhiteSpace(country))
+            //     query = query.Where(x => x.Country == country);
 
-            return await query.ToListAsync();
+            // if (!string.IsNullOrWhiteSpace(city))
+            //     query = query.Where(x => x.City == city);
+
+            // return await query.ToListAsync();
         }
 
         public async Task<Entities.Hotel?> GetHotelByIdAsync(int id)
         {
-            return await context.Hotels.FindAsync(id);
+            return null;
+            //   return await context.Hotels.FindAsync(id);
         }
 
         public bool HotelExist(int id)
         {
-            return context.Hotels.Any(x => x.Id == id);
+            return false;
+            //return context.Hotels.Any(x => x.Id == id);
         }
 
         public async Task<bool> SaveChangesAsync()
         {
-            return await context.SaveChangesAsync() > 0;
+            return false;
+            //return await context.SaveChangesAsync() > 0;
         }
 
         public void UpdateHotel(Entities.Hotel hotel)
         {
-            context.Entry(hotel).State = EntityState.Modified;
+            //context.Entry(hotel).State = EntityState.Modified;
         }
     }
 }
